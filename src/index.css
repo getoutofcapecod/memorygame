@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1a1536;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Press Start 2P', monospace;
+  background: #1a1536;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px var(--color-text-shadow);
+}
+
+.text-shadow-sm {
+  text-shadow: 1px 1px var(--color-text-shadow);
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+/* Custom utilities for extra small screens */
+@media (max-width: 374px) {
+  .xs\:text-xs { font-size: 0.625rem; }
+  .xs\:text-sm { font-size: 0.75rem; }
+  .xs\:text-base { font-size: 0.875rem; }
+  .xs\:text-lg { font-size: 1rem; }
+  .xs\:text-xl { font-size: 1.125rem; }
+  .xs\:text-2xl { font-size: 1.25rem; }
+  .xs\:text-3xl { font-size: 1.5rem; }
+  .xs\:gap-2 { gap: 0.5rem; }
+}
+
+/* 3D card flip styles */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.shadow-pixel-sm {
+  box-shadow: inset 0px -3px 0px 0px var(--color-button-shadow);
+}
+
+.shadow-pixel-md {
+  box-shadow: inset 0px -4px 0px 0px var(--color-button-shadow);
+}
+
+.shadow-card {
+  box-shadow: inset -3px -3px 0px 0px var(--color-secondary-shadow);
+}
+
+.shadow-card-matched {
+  box-shadow: inset -3px -3px 0px 0px var(--color-accent-shadow);
+}
+
+.shadow-card-front {
+  box-shadow: inset -3px -3px 0px 0px #d0d0d0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Disable text selection on game elements */
+.select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Pixel-perfect rendering */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* 3D card flip styles */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
